@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 1 - StudentHub Low-Fidelity Wireframes</title>
+  <style>
+    :root {
+      --wire-bg: #f8fafc;
+      --wire-border: #94a3b8;
+      --wire-text: #475569;
+      --wire-box: #e2e8f0;
+      --wire-accent: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 2rem;
+    }
+    header {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 1rem;
+    }
+    h1 { font-size: 1.8rem; color: #38bdf8; margin-bottom: 0.5rem; }
+    p.subtitle { color: #94a3b8; font-size: 0.95rem; }
+    .wire-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .wireframe-card {
+      background: white;
+      color: #1e293b;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+    }
+    .wireframe-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .wire-page {
+      border: 2px dashed var(--wire-border);
+      background: var(--wire-bg);
+      border-radius: 6px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 420px;
+    }
+    .wire-nav {
+      border: 1px solid var(--wire-border);
+      background: var(--wire-box);
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .wire-hero {
+      border: 1px solid var(--wire-border);
+      background: #cbd5e1;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--wire-text);
+      text-align: center;
+      padding: 0.5rem;
+    }
+    .wire-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    .wire-box {
+      border: 1px solid var(--wire-border);
+      background: var(--wire-box);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--wire-text);
+      border-radius: 4px;
+    }
+    .wire-footer {
+      border: 1px solid var(--wire-border);
+      background: #cbd5e1;
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      margin-top: auto;
+    }
+    .wire-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+    .wire-input {
+      border: 1px solid var(--wire-border);
+      background: white;
+      padding: 0.4rem;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+    .wire-button {
+      background: #475569;
+      color: white;
+      padding: 0.4rem;
+      text-align: center;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>StudentHub - Low-Fidelity UI Wireframes</h1>
+    <p class="subtitle">Practical 1 | Charotar University of Science and Technology (CHARUSAT) | ITUE203</p>
+  </header>
+
+  <main class="wire-container">
+    <!-- Wireframe 1: Homepage -->
+    <div class="wireframe-card">
+      <div class="wireframe-title">
+        <span>1. Home Page Wireframe</span>
+        <small style="color: #64748b; font-weight: normal;">index.html</small>
+      </div>
+      <div class="wire-page">
+        <div class="wire-nav">
+          <span>[Logo] StudentHub</span>
+          <span>[Nav Links: Home | About | Events | Login | Register]</span>
+        </div>
+        <div class="wire-hero">
+          <strong>[Hero Banner: Welcome to CHARUSAT StudentHub]</strong>
+          <span>Call-to-Action Buttons (Explore Events / Register)</span>
+        </div>
+        <div class="wire-grid-3">
+          <div class="wire-box">[Card: Upcoming Tech Expo]</div>
+          <div class="wire-box">[Card: Cultural Fest 2026]</div>
+          <div class="wire-box">[Card: Academic Notices]</div>
+        </div>
+        <div class="wire-box">[Campus Quick Stats: 5000+ Students | 120+ Events | 8 Departments]</div>
+        <div class="wire-footer">[Footer: Sitemap | Policies | Social Links | &copy; CHARUSAT]</div>
+      </div>
+    </div>
+
+    <!-- Wireframe 2: Registration -->
+    <div class="wireframe-card">
+      <div class="wireframe-title">
+        <span>2. Registration Page Wireframe</span>
+        <small style="color: #64748b; font-weight: normal;">register.html</small>
+      </div>
+      <div class="wire-page">
+        <div class="wire-nav">
+          <span>[Logo] StudentHub</span>
+          <span>[Back to Home | Login]</span>
+        </div>
+        <div class="wire-form">
+          <div style="font-weight: bold; font-size: 0.85rem; text-align: center;">[Student Registration Form]</div>
+          <div class="wire-input">[Input: Full Name]</div>
+          <div class="wire-input">[Input: Student ID / Email Address]</div>
+          <div class="wire-input">[Input: Mobile Number]</div>
+          <div class="wire-input">[Select: Department & Semester]</div>
+          <div class="wire-input">[Input: Password + Strength Indicator]</div>
+          <div class="wire-input">[Input: Confirm Password]</div>
+          <div style="font-size: 0.7rem; color: #475569;">[Checkbox: I accept the Terms & Regulations]</div>
+          <div class="wire-button">[Button: Submit Registration]</div>
+        </div>
+        <div class="wire-footer">[Footer: Support Desk &amp; Help Links]</div>
+      </div>
+    </div>
+
+    <!-- Wireframe 3: Events Catalog -->
+    <div class="wireframe-card">
+      <div class="wireframe-title">
+        <span>3. Events Catalog Wireframe</span>
+        <small style="color: #64748b; font-weight: normal;">events.html</small>
+      </div>
+      <div class="wire-page">
+        <div class="wire-nav">
+          <span>[Logo] StudentHub</span>
+          <span>[Home | Events | Dashboard | Profile | Logout]</span>
+        </div>
+        <div class="wire-box" style="display: flex; gap: 0.5rem; justify-content: space-between;">
+          <span style="flex: 2; border: 1px solid #94a3b8; background: white; padding: 0.2rem 0.5rem;">[Search by Event Name...]</span>
+          <span style="flex: 1; border: 1px solid #94a3b8; background: white; padding: 0.2rem 0.5rem;">[Filter: Category]</span>
+          <span style="flex: 1; border: 1px solid #94a3b8; background: white; padding: 0.2rem 0.5rem;">[Sort: Date]</span>
+        </div>
+        <div class="wire-grid-3">
+          <div class="wire-box" style="height: 120px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>[Image Poster]</div>
+            <strong>[WebDev Hackathon]</strong>
+            <button style="padding: 2px;">Register</button>
+          </div>
+          <div class="wire-box" style="height: 120px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>[Image Poster]</div>
+            <strong>[RoboWars 2026]</strong>
+            <button style="padding: 2px;">Register</button>
+          </div>
+          <div class="wire-box" style="height: 120px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>[Image Poster]</div>
+            <strong>[AI Workshop]</strong>
+            <button style="padding: 2px;">Register</button>
+          </div>
+        </div>
+        <div class="wire-box" style="text-align: center;">[Pagination: &laquo; Prev | Page 1 of 3 | Next &raquo;]</div>
+        <div class="wire-footer">[Footer: StudentHub Event Operations]</div>
+      </div>
+    </div>
+
+    <!-- Wireframe 4: Admin Dashboard -->
+    <div class="wireframe-card">
+      <div class="wireframe-title">
+        <span>4. Admin Dashboard Wireframe</span>
+        <small style="color: #64748b; font-weight: normal;">admin_dashboard.html</small>
+      </div>
+      <div class="wire-page">
+        <div class="wire-nav">
+          <span>[Admin Panel] StudentHub</span>
+          <span>[Dashboard | Students | Events | Audit Logs | Logout]</span>
+        </div>
+        <div class="wire-grid-3">
+          <div class="wire-box" style="background: #e0f2fe;"><strong>[Metric: 2,450]</strong><br>Total Students</div>
+          <div class="wire-box" style="background: #dcfce7;"><strong>[Metric: 18]</strong><br>Active Events</div>
+          <div class="wire-box" style="background: #fee2e2;"><strong>[Metric: 940]</strong><br>Registrations</div>
+        </div>
+        <div class="wire-box" style="text-align: left; height: 110px;">
+          <strong>[Recent Student Registrations Table]</strong>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.7rem; margin-top: 4px;">
+            <tr style="border-bottom: 1px solid #cbd5e1;"><th>ID</th><th>Name</th><th>Course</th><th>Status</th></tr>
+            <tr><td>24IT001</td><td>Alice Patel</td><td>B.Tech IT</td><td>Active</td></tr>
+            <tr><td>24CS042</td><td>Bob Shah</td><td>B.Tech CSE</td><td>Active</td></tr>
+          </table>
+        </div>
+        <div class="wire-footer">[Footer: System Version 1.0.0 | Protected Administrator Environment]</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

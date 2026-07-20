@@ -1,0 +1,29 @@
+# Course reference PDF (do not track)
+Practical_List_ITUE203_WDF_2026_27.pdf
+*.pdf
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor & IDE settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment & Server
+*.log
+.env
+.env.local
+node_modules/
+vendor/
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+make_commits.py

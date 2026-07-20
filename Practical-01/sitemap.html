@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 1 - StudentHub Sitemap & Navigation Architecture</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --admin-badge: #f43f5e;
+      --student-badge: #10b981;
+      --public-badge: #38bdf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    header {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    h1 { font-size: 1.8rem; color: var(--accent); margin-bottom: 0.5rem; }
+    p.subtitle { color: var(--text-muted); font-size: 0.95rem; }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-public { background: rgba(56, 189, 248, 0.15); color: var(--public-badge); border: 1px solid var(--public-badge); }
+    .badge-student { background: rgba(16, 185, 129, 0.15); color: var(--student-badge); border: 1px solid var(--student-badge); }
+    .badge-admin { background: rgba(244, 63, 94, 0.15); color: var(--admin-badge); border: 1px solid var(--admin-badge); }
+    
+    .legend {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: var(--card-bg);
+      border-radius: 8px;
+      max-width: 1100px;
+      margin-inline: auto;
+    }
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cluster {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .cluster h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .page-item {
+      background: rgba(15, 23, 42, 0.6);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+    }
+    .page-item.student { border-left-color: var(--student-badge); }
+    .page-item.admin { border-left-color: var(--admin-badge); }
+    .page-title { font-weight: 600; font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center; }
+    .page-desc { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .page-url { font-family: monospace; font-size: 0.75rem; color: var(--accent); margin-top: 0.25rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>StudentHub - Portal Sitemap & Navigation Structure</h1>
+    <p class="subtitle">Practical 1 | Charotar University of Science and Technology (CHARUSAT) | ITUE203</p>
+  </header>
+
+  <div class="legend">
+    <strong>User Roles:</strong>
+    <span class="badge badge-public">Public / Guest</span>
+    <span class="badge badge-student">Authenticated Student</span>
+    <span class="badge badge-admin">Portal Administrator</span>
+  </div>
+
+  <main class="sitemap-grid">
+    <div class="cluster">
+      <h2>Public Information <span class="badge badge-public">Public</span></h2>
+      <ul class="page-list">
+        <li class="page-item">
+          <div class="page-title">1. Home Page</div>
+          <div class="page-desc">Landing hero, featured events, campus statistics, announcements ticker</div>
+          <div class="page-url">index.html</div>
+        </li>
+        <li class="page-item">
+          <div class="page-title">2. About Us</div>
+          <div class="page-desc">University vision, portal mission, team members, department overview</div>
+          <div class="page-url">about.html</div>
+        </li>
+        <li class="page-item">
+          <div class="page-title">3. Events Catalog</div>
+          <div class="page-desc">Public view of upcoming workshops, sports events, cultural fests</div>
+          <div class="page-url">events.html</div>
+        </li>
+        <li class="page-item">
+          <div class="page-title">4. Frequently Asked Questions</div>
+          <div class="page-desc">Searchable FAQ accordion with categories (Admissions, Academics, Hostel)</div>
+          <div class="page-url">faq.html</div>
+        </li>
+        <li class="page-item">
+          <div class="page-title">5. Contact Directory</div>
+          <div class="page-desc">Campus location map, phone directory, contact inquiry form</div>
+          <div class="page-url">contact.html</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cluster">
+      <h2>Authentication & Student Access <span class="badge badge-student">Student</span></h2>
+      <ul class="page-list">
+        <li class="page-item">
+          <div class="page-title">6. Student Registration</div>
+          <div class="page-desc">New student signup with validation, password strength indicator, terms</div>
+          <div class="page-url">register.html</div>
+        </li>
+        <li class="page-item">
+          <div class="page-title">7. User Login</div>
+          <div class="page-desc">Unified login modal/page with role redirection (student / admin)</div>
+          <div class="page-url">login.html</div>
+        </li>
+        <li class="page-item student">
+          <div class="page-title">8. Student Dashboard</div>
+          <div class="page-desc">Personalized student home: registered events, attendance, academic notices</div>
+          <div class="page-url">student_dashboard.html</div>
+        </li>
+        <li class="page-item student">
+          <div class="page-title">9. Student Profile</div>
+          <div class="page-desc">View and edit personal details, contact number, department, semester</div>
+          <div class="page-url">profile.html</div>
+        </li>
+        <li class="page-item student">
+          <div class="page-title">10. Student Feedback</div>
+          <div class="page-desc">Submit feedback, ratings, and queries to university administration</div>
+          <div class="page-url">feedback.html</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cluster">
+      <h2>Administration & Operations <span class="badge badge-admin">Admin</span></h2>
+      <ul class="page-list">
+        <li class="page-item admin">
+          <div class="page-title">11. Admin Dashboard</div>
+          <div class="page-desc">Metrics overview: total students, active events, new registrations, audit logs</div>
+          <div class="page-url">admin_dashboard.html</div>
+        </li>
+        <li class="page-item admin">
+          <div class="page-title">Student Management (CRUD)</div>
+          <div class="page-desc">View, filter, search, add, edit, and delete student academic records</div>
+          <div class="page-url">students.php (Practical 11)</div>
+        </li>
+        <li class="page-item admin">
+          <div class="page-title">Event Management & Poster Upload</div>
+          <div class="page-desc">Add and edit events with poster upload validation (type, size)</div>
+          <div class="page-url">admin_events.php (Practical 12)</div>
+        </li>
+        <li class="page-item admin">
+          <div class="page-title">Audit Logs & Security Trail</div>
+          <div class="page-desc">Trace user login times, record modifications, and administrative actions</div>
+          <div class="page-url">audit_logs.php (Practical 14)</div>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
