@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Events - Responsive Grid Catalog | CHARUSAT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="site-brand">StudentHub</a>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="register.html" class="nav-link">Register</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="margin-bottom: 2rem;">
+      <h1 style="color: var(--primary);">Campus Events &amp; Competitions</h1>
+      <p style="color: var(--text-muted);">Responsive card grid adapting from 1 column on mobile to 3 columns on desktop.</p>
+    </div>
+
+    <div class="grid-cards">
+      <div class="card">
+        <div style="background: #e0f2fe; height: 140px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold; margin-bottom: 1rem;">
+          [Tech Hackathon Banner]
+        </div>
+        <h3>WebDev 24-Hr Hackathon</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Organized by CSPIT IT Dept | Nov 12, 2026</p>
+        <p style="margin: 0.75rem 0;">Test your full-stack coding capabilities across frontend frameworks, backend APIs, and database engineering.</p>
+        <div class="card-footer">
+          <a href="register.html" class="btn btn-primary" style="display: block; text-align: center;">Register Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="background: #dcfce7; height: 140px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #16a34a; font-weight: bold; margin-bottom: 1rem;">
+          [RoboWars Arena Banner]
+        </div>
+        <h3>RoboWars: National Challenge</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Organized by Mechanical &amp; CE | Nov 20, 2026</p>
+        <p style="margin: 0.75rem 0;">Inter-collegiate combat robotics tournament with obstacle course and wired/wireless bot categories.</p>
+        <div class="card-footer">
+          <a href="register.html" class="btn btn-primary" style="display: block; text-align: center;">Register Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="background: #fef3c7; height: 140px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #d97706; font-weight: bold; margin-bottom: 1rem;">
+          [AI &amp; Data Workshop Banner]
+        </div>
+        <h3>Deep Learning &amp; LLM Masterclass</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Organized by CSPIT CSE | Dec 05, 2026</p>
+        <p style="margin: 0.75rem 0;">Comprehensive practical workshop exploring PyTorch, LLM fine-tuning, and vector database embeddings.</p>
+        <div class="card-footer">
+          <a href="register.html" class="btn btn-primary" style="display: block; text-align: center;">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026-27 StudentHub CHARUSAT</p>
+      <p>Practical 3 Responsive Implementation</p>
+    </div>
+  </footer>
+</body>
+</html>

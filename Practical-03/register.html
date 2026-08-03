@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration - Responsive Form | CHARUSAT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="site-brand">StudentHub</a>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="register.html" class="nav-link active">Register</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h1 style="color: var(--primary);">Student Portal Registration</h1>
+      <p style="color: var(--text-muted);">Responsive multi-column form utilizing CSS Grid and Flexbox</p>
+    </div>
+
+    <form class="form-grid" action="dashboard.html" method="get">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" class="form-control" placeholder="e.g. Alice" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" class="form-control" placeholder="e.g. Patel" required />
+        </div>
+      </div>
+
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="email">Student Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="student@charusat.edu.in" required />
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+      </div>
+
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department" class="form-control" required>
+            <option value="">Select Department...</option>
+            <option value="IT">Information Technology (CSPIT)</option>
+            <option value="CSE">Computer Science &amp; Engg (CSPIT)</option>
+            <option value="CE">Computer Engineering (DEPSTAR)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="semester">Current Semester</label>
+          <select id="semester" class="form-control" required>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3" selected>Semester 3</option>
+            <option value="4">Semester 4</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="pwd">Password</label>
+          <input type="password" id="pwd" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="cpwd">Confirm Password</label>
+          <input type="password" id="cpwd" class="form-control" required />
+        </div>
+      </div>
+
+      <div class="form-group" style="flex-direction: row; align-items: center; gap: 0.5rem;">
+        <input type="checkbox" id="terms" required />
+        <label for="terms" style="font-weight: normal; font-size: 0.85rem;">I accept university portal terms and conditions.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="background: var(--primary); color: white;">Create Student Account</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026-27 StudentHub CHARUSAT</p>
+      <p>Practical 3 Responsive Implementation</p>
+    </div>
+  </footer>
+</body>
+</html>
