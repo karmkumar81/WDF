@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 4 - JavaScript DOM Manipulation &amp; Interactivity | CHARUSAT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 1. Notification Banner -->
+  <div id="notification-banner" class="notification-banner" role="alert">
+    <span>Important Announcement: Continuous Evaluation Practical Submissions close on October 28, 2026!</span>
+    <button id="banner-close" class="banner-close-btn" aria-label="Dismiss Announcement">&times;</button>
+  </div>
+
+  <!-- Navbar with Hamburger & Theme Switcher -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">StudentHub JS</a>
+      
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          Toggle Theme
+        </button>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#slider-section">Highlights</a></li>
+        <li><a href="#modal-section">Action Modal</a></li>
+        <li><a href="#faq-section">FAQ Accordion</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- 2. Content / Image Slider -->
+    <section id="slider-section">
+      <h2 class="section-title">Campus Feature Highlights (Interactive Slider)</h2>
+      <div class="slider-container" aria-roledescription="carousel">
+        <div class="slide active" data-index="0">
+          <h3>SPORIC 2026: National Tech Symposium</h3>
+          <p>Over 40 engineering institutes competing in 12 technical coding and robotics tracks.</p>
+        </div>
+        <div class="slide" data-index="1">
+          <h3>Advanced AI Laboratories</h3>
+          <p>Equipped with GPU clusters supporting graduate student computer vision and NLP research.</p>
+        </div>
+        <div class="slide" data-index="2">
+          <h3>Student Incubation Center</h3>
+          <p>Mentorship and seed grant support for student-founded technology startups at CHARUSAT.</p>
+        </div>
+
+        <button id="prev-slide" class="slider-btn prev" aria-label="Previous Slide">&larr;</button>
+        <button id="next-slide" class="slider-btn next" aria-label="Next Slide">&rarr;</button>
+
+        <div id="slider-dots" class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Modal Popup -->
+    <section id="modal-section" style="background: var(--bg-surface); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
+      <h2 class="section-title" style="margin-bottom: 0.5rem;">Interactive Dialog Modal</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Supports backdrop click closing, ESC key handler, and focus management.</p>
+      <button id="open-modal-btn" class="btn btn-primary">Open Student Notice Modal</button>
+    </section>
+
+    <!-- 4. Collapsible FAQ Accordion -->
+    <section id="faq-section">
+      <h2 class="section-title">Frequently Asked Questions (Collapsible Accordion)</h2>
+      <div class="accordion" id="faq-accordion">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>What are the prerequisites for Semester 3 ITUE203?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Students should have fundamental knowledge of HTML, CSS, and basic programming concepts. Practical exercises progressively build into full-stack development using PHP and MySQL.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How does localStorage remember the selected UI theme?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>When the theme toggle button is clicked, JavaScript reads the current theme from <code>localStorage.getItem('studenthub_theme')</code>, swaps the value, writes it back with <code>localStorage.setItem()</code>, and updates the <code>data-theme</code> attribute on the document root.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How are event listeners safely attached in DOM scripts?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Event listeners use the W3C standard <code>element.addEventListener('event', handler)</code> inside a <code>DOMContentLoaded</code> lifecycle callback. This separates presentation from behavior and permits multiple listeners on elements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Popup Dialog Overlay -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close Dialog">&times;</button>
+      <h3 id="modal-title" style="color: var(--primary); margin-bottom: 1rem;">Important Examination Notice</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Practical continuous evaluation evaluations will be conducted according to schedule. Please verify that all 15 practical assignments are committed and documented.
+      </p>
+      <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+        <button id="modal-confirm" class="btn btn-primary">Acknowledge</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
