@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 5 - Student Registration with Regex Validation | CHARUSAT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="form-wrapper">
+    <h1>StudentHub Registration</h1>
+    <p class="subtitle">Complete client-side regex validation &amp; user-friendly error handling</p>
+
+    <div id="success-alert" class="alert-success" role="alert">
+      Registration submitted successfully! All inputs validated according to specifications.
+    </div>
+
+    <form id="registration-form" novalidate>
+      <!-- 1. Full Name -->
+      <div class="form-group">
+        <label for="fullname">Full Name <span style="color: red;">*</span></label>
+        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="e.g. Alice Patel" autocomplete="name" />
+        <div id="fullname-error" class="error-msg">Full Name must contain only letters and spaces (min 3 characters).</div>
+      </div>
+
+      <!-- 2. Email -->
+      <div class="form-group">
+        <label for="email">Email Address <span style="color: red;">*</span></label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="e.g. student@charusat.edu.in" autocomplete="email" />
+        <div id="email-error" class="error-msg">Please enter a valid email address (e.g., student@domain.com).</div>
+      </div>
+
+      <!-- 3. Mobile Number -->
+      <div class="form-group">
+        <label for="mobile">Mobile Number <span style="color: red;">*</span></label>
+        <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="10-digit Indian mobile number" autocomplete="tel" />
+        <div id="mobile-error" class="error-msg">Mobile number must be exactly 10 digits starting with 6, 7, 8, or 9.</div>
+      </div>
+
+      <!-- 4. Password -->
+      <div class="form-group">
+        <label for="password">Create Password <span style="color: red;">*</span></label>
+        <input type="password" id="password" name="password" class="form-control" autocomplete="new-password" />
+        <div class="strength-meter-container">
+          <div class="strength-bar"><div id="strength-fill" class="strength-fill"></div></div>
+          <div id="strength-text" class="strength-text">Password Strength: Empty</div>
+        </div>
+        <div id="password-error" class="error-msg">Password must be at least 8 chars with uppercase, lowercase, digit &amp; special symbol.</div>
+      </div>
+
+      <!-- 5. Confirm Password -->
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password <span style="color: red;">*</span></label>
+        <input type="password" id="confirm-password" name="confirm_password" class="form-control" autocomplete="new-password" />
+        <div id="confirm-password-error" class="error-msg">Passwords do not match.</div>
+      </div>
+
+      <!-- 6. Course Selection -->
+      <div class="form-group">
+        <label for="course">Degree Course / Department <span style="color: red;">*</span></label>
+        <select id="course" name="course" class="form-control">
+          <option value="">-- Choose Course --</option>
+          <option value="IT">B.Tech Information Technology (CSPIT)</option>
+          <option value="CSE">B.Tech Computer Science &amp; Engineering (CSPIT)</option>
+          <option value="CE">B.Tech Computer Engineering (DEPSTAR)</option>
+          <option value="AIML">B.Tech Artificial Intelligence &amp; Data Science</option>
+        </select>
+        <div id="course-error" class="error-msg">Please select your academic course.</div>
+      </div>
+
+      <!-- 7. Academic Year -->
+      <div class="form-group">
+        <label for="year">Academic Year <span style="color: red;">*</span></label>
+        <select id="year" name="year" class="form-control">
+          <option value="">-- Select Year --</option>
+          <option value="1">1st Year (Freshman)</option>
+          <option value="2">2nd Year (Sophomore)</option>
+          <option value="3">3rd Year (Junior)</option>
+          <option value="4">4th Year (Senior)</option>
+        </select>
+        <div id="year-error" class="error-msg">Please select your current academic year.</div>
+      </div>
+
+      <!-- 8. Gender -->
+      <div class="form-group">
+        <label>Gender <span style="color: red;">*</span></label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="gender" value="male" /> Male
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="gender" value="female" /> Female
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="gender" value="other" /> Other
+          </label>
+        </div>
+        <div id="gender-error" class="error-msg">Please specify your gender.</div>
+      </div>
+
+      <!-- 9. Terms Acceptance -->
+      <div class="form-group">
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="terms" name="terms" />
+            I agree to the student code of conduct and portal privacy terms.
+          </label>
+        </div>
+        <div id="terms-error" class="error-msg">You must accept the terms to proceed.</div>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit Registration</button>
+    </form>
+  </main>
+
+  <script src="validate.js"></script>
+</body>
+</html>
