@@ -1,0 +1,18 @@
+[
+  { "id": "24IT001", "name": "Alice Patel", "course": "IT", "department": "CSPIT", "year": "2nd", "gpa": 9.2 },
+  { "id": "24IT002", "name": "Bhavik Shah", "course": "IT", "department": "CSPIT", "year": "2nd", "gpa": 8.7 },
+  { "id": "24IT003", "name": "Chirag Joshi", "course": "IT", "department": "CSPIT", "year": "2nd", "gpa": 7.9 },
+  { "id": "24CS015", "name": "Dharti Varma", "course": "CSE", "department": "CSPIT", "year": "3rd", "gpa": 9.5 },
+  { "id": "24CS016", "name": "Eshan Trivedi", "course": "CSE", "department": "CSPIT", "year": "3rd", "gpa": 8.1 },
+  { "id": "24CS017", "name": "Falguni Dave", "course": "CSE", "department": "CSPIT", "year": "1st", "gpa": 8.9 },
+  { "id": "24CE101", "name": "Gaurav Modi", "course": "CE", "department": "DEPSTAR", "year": "2nd", "gpa": 8.4 },
+  { "id": "24CE102", "name": "Hetvi Desai", "course": "CE", "department": "DEPSTAR", "year": "2nd", "gpa": 9.1 },
+  { "id": "24CE103", "name": "Ishan Parikh", "course": "CE", "department": "DEPSTAR", "year": "4th", "gpa": 7.8 },
+  { "id": "24AI005", "name": "Jhanvi Mehta", "course": "AIML", "department": "CSPIT", "year": "2nd", "gpa": 9.3 },
+  { "id": "24AI006", "name": "Karan Thakkar", "course": "AIML", "department": "CSPIT", "year": "1st", "gpa": 8.0 },
+  { "id": "24IT025", "name": "Lalit Solanki", "course": "IT", "department": "CSPIT", "year": "3rd", "gpa": 8.6 },
+  { "id": "24IT026", "name": "Meera Rajput", "course": "IT", "department": "CSPIT", "year": "2nd", "gpa": 9.0 },
+  { "id": "24CS050", "name": "Nirav Barot", "course": "CSE", "department": "CSPIT", "year": "4th", "gpa": 8.3 },
+  { "id": "24CE120", "name": "Prachi Somani", "course": "CE", "department": "DEPSTAR", "year": "2nd", "gpa": 8.8 },
+  { "id": "24AI012", "name": "Rohan Bhatt", "course": "AIML", "department": "CSPIT", "year": "3rd", "gpa": 8.5 }
+]

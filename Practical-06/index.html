@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 6 - Fetch API, JSON Data, Search &amp; Filter | CHARUSAT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>StudentHub External JSON Explorer</h1>
+      <p>Dynamic data rendering using JavaScript Fetch API, live search, multi-criteria filtering, sorting, and pagination.</p>
+    </header>
+
+    <!-- Dataset Switcher -->
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-dataset="events" role="tab">Campus Events</button>
+      <button class="tab-btn" data-dataset="students" role="tab">Enrolled Students</button>
+      <button class="tab-btn" data-dataset="faqs" role="tab">Campus FAQs</button>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" id="search-input" class="search-input" placeholder="Live search by name, title, or keywords..." />
+      </div>
+
+      <div class="filter-group">
+        <select id="category-filter" class="select-control">
+          <option value="all">All Categories</option>
+        </select>
+
+        <select id="sort-select" class="select-control">
+          <option value="default">Sort: Default</option>
+          <option value="name-asc">Alphabetical (A - Z)</option>
+          <option value="name-desc">Alphabetical (Z - A)</option>
+        </select>
+
+        <select id="page-size-select" class="select-control">
+          <option value="6" selected>6 per page</option>
+          <option value="9">9 per page</option>
+          <option value="12">12 per page</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Loading Spinner & Error Message -->
+    <div id="spinner" class="spinner-container">
+      <div class="spinner"></div>
+      <p style="color: var(--text-muted);">Fetching JSON records asynchronously...</p>
+    </div>
+
+    <div id="error-alert" class="error-alert"></div>
+
+    <!-- Render Container -->
+    <div id="cards-container" class="cards-grid"></div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

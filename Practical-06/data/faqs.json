@@ -1,0 +1,17 @@
+[
+  { "id": 1, "category": "Admissions", "question": "What is the admission procedure for B.Tech programs?", "answer": "Admissions are conducted through ACPC Gujarat state counseling based on GUJCET / JEE Main percentile ranks." },
+  { "id": 2, "category": "Admissions", "question": "Are management quota seats available?", "answer": "Yes, designated NRI and management seats are processed strictly per ACPC and CHARUSAT institutional guidelines." },
+  { "id": 3, "category": "Academics", "question": "What is the minimum attendance required to appear for end-sem exams?", "answer": "A minimum of 80% cumulative attendance across theory lectures and practical lab sessions is mandatory." },
+  { "id": 4, "category": "Academics", "question": "How does the continuous evaluation grading work?", "answer": "Continuous evaluation constitutes 30% to 50% based on practical assignments, lab tests, and periodic quizzes." },
+  { "id": 5, "category": "Academics", "question": "Can students choose interdisciplinary elective courses?", "answer": "Yes, CHARUSAT University Electives (UE) allow students to take courses across different faculties in Semester 3 and 4." },
+  { "id": 6, "category": "Campus", "question": "Is high-speed Wi-Fi accessible across hostel buildings?", "answer": "Yes, 24x7 Wi-Fi coverage is provided for all students using institutional credentials." },
+  { "id": 7, "category": "Campus", "question": "What sports facilities are available on campus?", "answer": "Facilities include a full cricket ground, football turf, volleyball courts, basketball arena, and indoor badminton stadium." },
+  { "id": 8, "category": "Events", "question": "How do I register for campus hackathons and technical fests?", "answer": "Students can browse the Events tab on StudentHub and submit registration forms directly using their student credentials." },
+  { "id": 9, "category": "Events", "question": "Do participants receive participation certificates?", "answer": "Digital verified certificates of participation and merit are issued through the StudentHub portal within 7 days of event completion." },
+  { "id": 10, "category": "Hostel", "question": "What are the check-in and curfew timings for hostel premises?", "answer": "Evening biometric reporting is required by 8:30 PM for safety and campus administration." },
+  { "id": 11, "category": "Hostel", "question": "Is laundry and mess facility included in hostel charges?", "answer": "Nutritious vegetarian meals, clean RO drinking water, and weekly laundry facilities are included." },
+  { "id": 12, "category": "IT Support", "question": "What should I do if I forget my StudentHub account password?", "answer": "Submit a password reset request via the IT Support contact form or visit CSPIT Lab 102 with your university ID card." },
+  { "id": 13, "category": "IT Support", "question": "Can I access StudentHub from mobile smartphones?", "answer": "Yes, StudentHub is fully responsive and optimized for mobile, tablet, and desktop viewports." },
+  { "id": 14, "category": "Scholarships", "question": "Are merit-based tuition fee waivers offered?", "answer": "CHARUSAT provides financial assistance and merit scholarships to meritorious candidates in each department." },
+  { "id": 15, "category": "Placements", "question": "Which companies visit CHARUSAT for campus recruitment?", "answer": "Top recruiters include TCS, Infosys, Crest Data Systems, Meditab, Sophos, L&T Infotech, and Thomson Reuters." }
+]

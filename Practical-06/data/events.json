@@ -1,0 +1,18 @@
+[
+  { "id": 1, "title": "WebDev Hackathon 2026", "category": "Technical", "date": "2026-11-12", "location": "CSPIT Lab 304", "seats": 80 },
+  { "id": 2, "title": "RoboWars Arena Championship", "category": "Robotics", "date": "2026-11-20", "location": "Central Lawn", "seats": 40 },
+  { "id": 3, "title": "Deep Learning & LLM Masterclass", "category": "Workshop", "date": "2026-12-05", "location": "DEPSTAR Aud 1", "seats": 120 },
+  { "id": 4, "title": "CodeSprint Algorithmic Challenge", "category": "Technical", "date": "2026-10-25", "location": "Online / HackerRank", "seats": 200 },
+  { "id": 5, "title": "CyberSecurity CTF Tournament", "category": "Technical", "date": "2026-11-15", "location": "CSPIT Lab 201", "seats": 60 },
+  { "id": 6, "title": "Annual Inter-College Cricket Cup", "category": "Sports", "date": "2026-12-10", "location": "University Ground", "seats": 16 },
+  { "id": 7, "title": "Cloud Native Kubernetes Workshop", "category": "Workshop", "date": "2026-11-28", "location": "DEPSTAR Lab 105", "seats": 75 },
+  { "id": 8, "title": "Spandan Youth Cultural Festival", "category": "Cultural", "date": "2027-01-18", "location": "Open Air Theater", "seats": 500 },
+  { "id": 9, "title": "IoT Smart Agriculture Expo", "category": "Robotics", "date": "2026-12-02", "location": "FTE Seminar Hall", "seats": 90 },
+  { "id": 10, "title": "UI/UX Design Sprint with Figma", "category": "Workshop", "date": "2026-10-30", "location": "CSPIT Design Studio", "seats": 50 },
+  { "id": 11, "title": "Charusat Badminton Open", "category": "Sports", "date": "2026-11-05", "location": "Sports Complex", "seats": 32 },
+  { "id": 12, "title": "Blockchain & Smart Contracts 101", "category": "Technical", "date": "2026-12-15", "location": "DEPSTAR Lab 202", "seats": 65 },
+  { "id": 13, "title": "Battle of Bands Music Night", "category": "Cultural", "date": "2027-01-20", "location": "Main Amphitheater", "seats": 350 },
+  { "id": 14, "title": "Mobile App Dev with Flutter", "category": "Workshop", "date": "2026-11-22", "location": "CSPIT Lab 302", "seats": 70 },
+  { "id": 15, "title": "Entrepreneurship Pitch Fest", "category": "Technical", "date": "2026-12-20", "location": "Incubation Center", "seats": 40 },
+  { "id": 16, "title": "Table Tennis Invitational", "category": "Sports", "date": "2026-11-08", "location": "Indoor Stadium", "seats": 24 }
+]
